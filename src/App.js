@@ -35,18 +35,28 @@ const App = () => {
 
       // Pseudocode
         // iterate through vowelsArray (possible tool: for loop)
+        // Vowel functionality
         // compare first element in vowelsArray to first character in eachWord (possible tool: conditionals)
         // if element in vowelsArray matches first character in eachWord, append "way" to end of eachWord (possible tool: + operator)
         // return eachWord
-
+        // qu functionality 
+        // create a string of first two characters in eachWord (possible tool: substring method)
+        // compare substring to qu string (possible tool: conditionals)
+        // if substring matches qu append "quay" to eachWord 
+        // return eachWord
       // iterate through vowelsArray
       for (let i = 0; i < vowelsArray.length; i++) {
-
+        
         // compares first element in vowelsArray to first character in eachWord
         if (vowelsArray[i] === eachWord[0]) {
 
           // if statement is true, and "way" to end of eachWord
            return eachWord = eachWord + "way"
+        }
+      // compares eachWord.substring to "qu"
+        else if (eachWord.substring(0,2) === "qu"){
+          // if statement is true add "quay" to end of eachWord
+          return eachWord = eachWord.substring(2) + "quay"
         }
       }
 
