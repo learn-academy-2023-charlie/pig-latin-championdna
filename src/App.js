@@ -34,35 +34,59 @@ const App = () => {
       // ACTION ITEM: your Pig Latin logic goes here!
 
       // Pseudocode
-        // iterate through vowelsArray (possible tool: for loop)
         // Vowel functionality
-        // compare first element in vowelsArray to first character in eachWord (possible tool: conditionals)
-        // if element in vowelsArray matches first character in eachWord, append "way" to end of eachWord (possible tool: + operator)
-        // return eachWord
-        // qu functionality 
-        // create a string of first two characters in eachWord (possible tool: substring method)
-        // compare substring to qu string (possible tool: conditionals)
-        // if substring matches qu append "quay" to eachWord 
-        // return eachWord
-      // iterate through vowelsArray
-      for (let i = 0; i < vowelsArray.length; i++) {
+          // iterate through vowelsArray (possible tool: for loop)
+          // compare first element in vowelsArray to first character in eachWord (possible tool: conditionals)
+          // if element in vowelsArray matches first character in eachWord, append "way" to end of eachWord (possible tool: + operator)
+          // return eachWord
         
-        // compares first element in vowelsArray to first character in eachWord
-        if (vowelsArray[i] === eachWord[0]) {
+        // qu functionality 
+          // create a string of first two characters in eachWord (possible tool: substring method)
+          // compare substring to qu string (possible tool: conditionals)
+          // if substring matches qu append "quay" to eachWord 
+          // return eachWord
+      
+        // y functionality
+          // 
 
-          // if statement is true, and "way" to end of eachWord
-           return eachWord = eachWord + "way"
-        }
       // compares eachWord.substring to "qu"
-        else if (eachWord.substring(0,2) === "qu"){
-          // if statement is true add "quay" to end of eachWord
-          return eachWord = eachWord.substring(2) + "quay"
+      if (eachWord.substring(0,2) === "qu"){
+
+            // if statement is true add "quay" to end of eachWord
+            return eachWord = eachWord.substring(2) + "quay"
+      }
+
+      else {
+        
+        if (!vowelsArray.length) {
+
+          let index = 0
+          for (let i = 0; i < eachWord.length; i++){
+            if (eachWord[i] === "y"){
+              index = i
+            }
+          }
+          return eachWord = eachWord.substring(index) + eachWord.substring(0,index) + "ay"
+        }
+
+        else {
+        // iterate through vowelsArray
+        for (let i = 0; i < vowelsArray.length; i++) {
+        
+          // compares first element in vowelsArray to first character in eachWord
+          if (vowelsArray[i] === eachWord[0]) {
+
+            // if statement is true, and "way" to end of eachWord
+            return eachWord = eachWord + "way"
+          }
+
         }
       }
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
-    })
+    }
+  })
 
     // NO MODIFICATION NEEDED: once the code has been modified it gets joined from an array back to a string
     const translatedWords = translatedWordsArray.join(" ")
