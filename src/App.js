@@ -33,7 +33,22 @@ const App = () => {
 
       // ACTION ITEM: your Pig Latin logic goes here!
 
-    
+      // Pseudocode
+        // iterate through vowelsArray (possible tool: for loop)
+        // compare first element in vowelsArray to first character in eachWord (possible tool: conditionals)
+        // if element in vowelsArray matches first character in eachWord, append "way" to end of eachWord (possible tool: + operator)
+        // return eachWord
+
+      // iterate through vowelsArray
+      for (let i = 0; i < vowelsArray.length; i++) {
+
+        // compares first element in vowelsArray to first character in eachWord
+        if (vowelsArray[i] === eachWord[0]) {
+
+          // if statement is true, and "way" to end of eachWord
+           return eachWord = eachWord + "way"
+        }
+      }
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
